@@ -1,72 +1,187 @@
 @import url('https://fonts.cdnfonts.com/css/digital-numbers');
+@font-face {
+    font-family: "maxwell";
+    src: url('../fuentes/MaxwellSmCaps-BoldItalic.ttf');
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: "Press start";
+    src: url('../fuentes/PressStart2P-Regular.ttf');
+    font-style: normal;
+    font-weight: bold;
+  }
         
 * {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 transition: all .8s;
+
 }
 body {
-display: grid;
-place-content: center;
-height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.logo{
+    margin-top: 10vh;
+    width: 300px;
+}
+.logo .logo_alcarrito{
+    width: 100%;
+}
+.logo_dinosaurio, .logo_astronauta{
+    width: 300px;
+}
+.logo_dinosaurio{
+    left: 0;
+    top: 0;
+}
+.logo_astronauta{
+ top: 15%;
+ right: 0;
 }
 
+.logo_bomba{
+    bottom: 0;
+    right: 0;
+}
+.logo_simini_uno{
+    bottom: 0;
+    left: 0;
+}
+.logo_simini_dos{
+    bottom: 0;
+    right: 0;
+}
+.logo_simini_tres{
+    bottom: 0;
+    right: 5%;
+}
+.logo_simini_cuatro{
+    width: 100px;
+    bottom: 30%;
+    right: 0;
+}
+
+.logo_simini_cinco{
+    bottom: 2%;
+    right: 20%;
+}
+
+.landing{
+    max-width: 1400px;
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.landing_img_piramide, .landing_img_silla{
+    top: 0;
+    left: calc(50% - 300px);
+}
+.landing_img_silla{
+    width: 600px;
+    top: 30px;
+}
+.landing_img_piramide{
+    width: 600px;
+    opacity: 0.8;
+}
+.landing_parrafos{
+    top: 20%;
+    left: calc(80% - 225px);
+}
+.landing_titulo{
+    font-family: 'maxwell';
+    width: 450px;
+}
+.landing_titulo_uno{
+   font-size: 2rem; 
+}
+.landing_titulo_dos, .landing_titulo_tres{
+    font-size: 4rem; 
+    line-height: 3rem;
+}
+.sesgar {
+    transform: skewY(-5deg);
+}
+.landing_titulo_tres {
+    color: #00e4e7;
+    background-color: #e936b0;
+    padding: 20px 20px 0px 20px;
+}
+
+/**********CONTADOR******************/
+.texto_meta{
+    color: #00FFFF;
+    width: 400px;
+    margin: auto;
+}
 .countdown {
-padding: 80px;
-text-align: center;
-border: solid 10px rgb(50, 50, 50);
-border-radius: 35px;
-
-font-family: 'Digital Numbers', sans-serif;
-font-size: 50px;
-color: rgb(0, 119, 255);
-text-shadow: 0 0 10px rgb(24, 8, 255);
-
-background-color: rgb(0, 0, 0);
-
+    text-align: center;
+    font-family: "Press start", sans-serif;
+    font-size: 2rem;
+    color: #00FFFF;
+    text-shadow: 0 0 10px rgb(24, 8, 255);
+    background-color: rgb(0, 0, 0);
+    width: 400px;
+    margin: 50px auto 80px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 
 .countdown span {
-text-align: end;
+text-align: center;
 position: relative;
-display: inline-block;
+flex-direction: column;
 min-width: 80px;
 height: 90px;
 padding-bottom: 10px;
 }
 
-.countdown span::after {
-content: '88';
-position: absolute;
-left: 0;
-color: rgba(255, 255, 255, 0.1);
-text-shadow: none;
-}
+
 .countdown #dayElement::before {
-content: 'Dias';
+content: 'DÍAS';
 }
 .countdown #hourElement::before {
-content: 'Horas';
+content: 'HORAS';
 }
 .countdown #minElement::before {
-content: 'Minutos';
+content: 'MIN.';
 }
 .countdown #secElement::before {
-content: 'Segundos';
+content: 'SEG.';
 }
 .countdown span::before {
 position: absolute;
-bottom: 0;
+top: -20px;
 left: 50%;
 transform: translate(-50%, 0);
-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-font-size: 16px;
+font-size: 10px;
 font-weight: bold;
-color: darkgray;
+color: #00FFFF;
 text-shadow: none;
 }
-/*final timer*/
+.separador_uno{
+    width: 40px !important;
+    margin: 0 !important;
+    position: absolute;
+}
+
+/*************progresso barra*************/
 .load-bar{
 width: 50%;
 background-color: #ccc;
@@ -76,21 +191,106 @@ margin: 1rem 0;
 }
 .progress{
 display: block;
-background-color: royalblue;
+background-color: 00FFFF;
 height: 10px;
 width: 0;
 }
-.producto{
-display: flex;
+.producto {
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 200px;
+    background-color: rgb(0, 0, 0);
+    font-family: "Press start";
 }
-.producto-description, .producto-img{
-width: 50%;
+.producto-description, .producto-img {
+    width: 100%;
+    max-width: 700px;
 }
 .img-product{
 width: 100%;
 }
 #price{
-font-size: 3rem;
-font-weight: bold;
-color: blueviolet;
+font-family: "Press start";
+font-size: 2rem;
+transform: translateY(-17px);
+
+}
+
+/************CAJA DE PRECIOS*****************/
+
+.precio_ahora{
+    display: flex;
+    width: 400px;
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+    border: 5px dotted #e936b0;
+    color: #e936b0;
+    margin-top: 80px;
+}
+
+#price, #inicialPrice{
+    font-size: 3rem;
+}
+.precio_ahora span{
+    background-color: black;
+    padding: 10px 30px;
+    transform: translateY(-35px);
+}
+.separador{
+    width: 410px;
+    border: none;
+    color: #00FFFF;
+    margin:20px auto;
+    border-style: dotted;
+    border-top-width: 0;
+    border-bottom-width: 5px;
+}
+
+.total_seguidores {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00FFFF;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seguidores_texto {
+    font-size: 12px;
+    width: 60%;
+    padding: 10px 20px 10px 0px;
+}
+.seguidores_conteo{
+    font-size: 1.5rem;
+    justify-content: end;
+    width: 40%;
+    border-left: 5px dotted #00FFFF;
+}
+.seguidores_conteo span{
+    border: 5px dotted #00FFFF;
+    padding: 10px 0 10px 50px;
+}
+.precio_antes{
+    display: flex;
+    width: 400px;
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 50px;
+    color: #00FFFF;
+}
+.precio_antes span{
+    background-color: black;
+    padding: 20px 30px;
 }

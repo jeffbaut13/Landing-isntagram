@@ -1,5 +1,6 @@
 
-let url = 'https://graph.facebook.com/v15.0/17841435859161379?fields=followers_count&access_token=EAAJyQGZAHXFUBADBLE2jiRzXmuVNZA3ZAbsqY9UInWfKAlGBCX7ZA6IoVE0D8sBRUNWEsXw0Tg3B1r6PbwxyojRPaGi0BvCesEXT1YyJiueswvQuovI2UdiVsZAL2lzW0VTySTuZCzldqajQHjIhME32ny7eVAILYKRNRmkSaMybTz6WPm1xCU'
+//let url = 'https://graph.facebook.com/v15.0/17841435859161379?fields=followers_count&access_token=EAAJyQGZAHXFUBADBLE2jiRzXmuVNZA3ZAbsqY9UInWfKAlGBCX7ZA6IoVE0D8sBRUNWEsXw0Tg3B1r6PbwxyojRPaGi0BvCesEXT1YyJiueswvQuovI2UdiVsZAL2lzW0VTySTuZCzldqajQHjIhME32ny7eVAILYKRNRmkSaMybTz6WPm1xCU'
+let url = 'https://graph.facebook.com/v15.0/17841435859161379?fields=followers_count&access_token=EAAJ97ojT58ABABvZB2KZADwGKQ0VqSmmoy4La8Q1K7aH0RFbIvBizlCRSc4ZCts8ZAXm4H7S7ZCZBGbt0ZChzerZBbYA7TsHnAqZBnKdoH5DmcwyoiOxWqBXcmNjmxvhr5SDbLmeWWZBn8EZAeXrniOsLtY719zZCmsAO87JFpaPpCAT1jNZB0cJQO4NeDnvlDBxNRbnx4yFBfEfSBeaO4vxcDSa45ZA2PRczmuuST9b8AqdpdKwZDZD'
         
         
     fetch(url)
@@ -34,10 +35,13 @@ let url = 'https://graph.facebook.com/v15.0/17841435859161379?fields=followers_c
 
         let follow = porcentaje.toString();
         let reduccion = limite - followers;
-
-        x.style.width = `${follow}%`;
-
-        y.textContent = `${follow}%`;
+        
+        //calculo de barra de progreso
+        //x.style.width = `${follow}%`;
+        
+        //calculo de porcentaje
+        //y.textContent = `${follow}%`;
+        
         let countFollowers = followers - cuentaInicial
 
 
