@@ -1,0 +1,96 @@
+@import url('https://fonts.cdnfonts.com/css/digital-numbers');
+        
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+transition: all .8s;
+}
+body {
+display: grid;
+place-content: center;
+height: 100vh;
+}
+
+.countdown {
+padding: 80px;
+text-align: center;
+border: solid 10px rgb(50, 50, 50);
+border-radius: 35px;
+
+font-family: 'Digital Numbers', sans-serif;
+font-size: 50px;
+color: rgb(0, 119, 255);
+text-shadow: 0 0 10px rgb(24, 8, 255);
+
+background-color: rgb(0, 0, 0);
+
+}
+
+.countdown span {
+text-align: end;
+position: relative;
+display: inline-block;
+min-width: 80px;
+height: 90px;
+padding-bottom: 10px;
+}
+
+.countdown span::after {
+content: '88';
+position: absolute;
+left: 0;
+color: rgba(255, 255, 255, 0.1);
+text-shadow: none;
+}
+.countdown #dayElement::before {
+content: 'Dias';
+}
+.countdown #hourElement::before {
+content: 'Horas';
+}
+.countdown #minElement::before {
+content: 'Minutos';
+}
+.countdown #secElement::before {
+content: 'Segundos';
+}
+.countdown span::before {
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translate(-50%, 0);
+font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 16px;
+font-weight: bold;
+color: darkgray;
+text-shadow: none;
+}
+/*final timer*/
+.load-bar{
+width: 50%;
+background-color: #ccc;
+height: 10px;
+position: relative;
+margin: 1rem 0;
+}
+.progress{
+display: block;
+background-color: royalblue;
+height: 10px;
+width: 0;
+}
+.producto{
+display: flex;
+}
+.producto-description, .producto-img{
+width: 50%;
+}
+.img-product{
+width: 100%;
+}
+#price{
+font-size: 3rem;
+font-weight: bold;
+color: blueviolet;
+}
