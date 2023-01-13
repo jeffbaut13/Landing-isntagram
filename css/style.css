@@ -105,9 +105,13 @@ body {
 .landing_titulo{
     font-family: 'maxwell';
     width: 500px;
+    line-height: 40px;
+    display: inline-block;
+    padding-top: 10px;
 }
 .landing_titulo_uno{
    font-size: 2rem; 
+   padding: 0;
 }
 .landing_titulo_dos, .landing_titulo_tres{
     font-size: 4rem; 
@@ -115,6 +119,9 @@ body {
 }
 .sesgar {
     transform: skewY(-5deg);
+}
+.landing_titulo_dos{
+    margin-top: 5px;
 }
 .landing_titulo_tres {
     color: #00e4e7;
@@ -138,10 +145,9 @@ body {
     font-family: "Press start", sans-serif;
     font-size: 2rem;
     color: #00FFFF;
-    text-shadow: 0 0 10px rgb(24, 8, 255);
-    background-color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px #00ffff60;
     width: 400px;
-    margin: 50px auto 80px auto;
+    margin: 50px auto 300px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -203,16 +209,17 @@ width: 0;
 .producto {
     display: flex;
     width: 100%;
-    max-width: 550px;
+    max-width: 500px;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 200px;
     background-color: rgb(0, 0, 0);
     font-family: "Press start";
+    box-shadow: inset 1px -20px 62px 20px #e936b038;
 }
 .producto-description, .producto-img {
     width: 100%;
     max-width: 500px;
+    box-shadow: inset 28px 15px 89px -24px #07ffee21;
 }
 .img-product{
 width: 100%;
@@ -223,7 +230,10 @@ font-size: 2rem;
 transform: translateY(-17px);
 
 }
-
+.index{
+    z-index: 2;
+    position: relative;
+}
 /************CAJA DE PRECIOS*****************/
 
 .precio_ahora{
