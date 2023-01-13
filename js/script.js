@@ -1,6 +1,6 @@
 
 //let url = 'https://graph.facebook.com/v15.0/17841435859161379?fields=followers_count&access_token=EAAJyQGZAHXFUBADBLE2jiRzXmuVNZA3ZAbsqY9UInWfKAlGBCX7ZA6IoVE0D8sBRUNWEsXw0Tg3B1r6PbwxyojRPaGi0BvCesEXT1YyJiueswvQuovI2UdiVsZAL2lzW0VTySTuZCzldqajQHjIhME32ny7eVAILYKRNRmkSaMybTz6WPm1xCU'
-let url = 'https://graph.facebook.com/v15.0/17841435859161379?fields=followers_count&access_token=EAAJ97ojT58ABABvZB2KZADwGKQ0VqSmmoy4La8Q1K7aH0RFbIvBizlCRSc4ZCts8ZAXm4H7S7ZCZBGbt0ZChzerZBbYA7TsHnAqZBnKdoH5DmcwyoiOxWqBXcmNjmxvhr5SDbLmeWWZBn8EZAeXrniOsLtY719zZCmsAO87JFpaPpCAT1jNZB0cJQO4NeDnvlDBxNRbnx4yFBfEfSBeaO4vxcDSa45ZA2PRczmuuST9b8AqdpdKwZDZD'
+let url = 'https://graph.facebook.com/v15.0/17841435859161379?fields=followers_count&access_token=EAAJ97ojT58ABAF2kxRFci5n1TrnBaBjOasWuHuYZAjFM5vavbGon6QXaClR50twb4RmbWSgW0MCvS5MWZCOWFHIyksdDsish3xonprrZA8kw8vZCwIBm0IlHFtzgnJqTcecHSf8uIIUerT1mZA702ZBKOQtS6lKq4t3bN9o5eNomFMRRyX2i7pmrcZAxnLjcGuPsZCLo1cQHuBC6IwkRAMKaAAwI9oL2zqmlctfQ1CITfwZDZD'
         
         
     fetch(url)
@@ -11,10 +11,11 @@ let url = 'https://graph.facebook.com/v15.0/17841435859161379?fields=followers_c
     const mostrarData = (data) => {
         console.log(data.followers_count)
     
-        let followers =  data.followers_count.toString();
+        let followers =  2886; //data.followers_count.toString();
         const x = document.getElementById('progress');
         const y = document.getElementById('porcentaje');
         const z = document.getElementById('price');
+        const seg = document.getElementById('seguidoreConteo');
         
         let cuentaInicial = 2866;
         let limite = 2966;
@@ -41,7 +42,6 @@ let url = 'https://graph.facebook.com/v15.0/17841435859161379?fields=followers_c
         
         //calculo de porcentaje
         //y.textContent = `${follow}%`;
-        
         let countFollowers = followers - cuentaInicial
 
 
@@ -65,7 +65,7 @@ let bajarPrecio = (umbral, descuento) => {
             acumulados = price;   
             z.textContent = `$${price}`; 
 
-            console.log(`el acumulado es ${countFollowers}`);
+            seg.textContent = countFollowers;
 
             bajarPrecio(20, 10000);
 
@@ -122,6 +122,6 @@ const timerUpdate = setInterval( () => {
 }, 1000)
 };
 
-countdown('Mar 31 2023 21:34:40 GMT-0500', 'clock', '¡Ya empezó!');
+countdown('Jan 31 2023 21:34:40 GMT-0500', 'clock', '¡Ya empezó!');
 
             
