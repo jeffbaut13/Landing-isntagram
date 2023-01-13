@@ -326,7 +326,7 @@ transform: translateY(-17px);
     justify-content: center;
 }
 
-.index.botones button {
+.index.botones .button {
     width: 300px;
     border: 5px solid white;
     border-radius: 10px;
