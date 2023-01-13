@@ -102,28 +102,33 @@ body {
     top: 20%;
     left: calc(80% - 225px);
 }
+.sesgar {
+    transform: skewY(-5deg);
+    position: relative;
+}
 .landing_titulo{
     font-family: 'maxwell';
     width: 500px;
-    line-height: 40px;
-    display: inline-block;
-    padding-top: 10px;
+    position: absolute;
+    top: 0;
 }
-.landing_titulo_uno{
+.landing_titulo_uno, .landing_titulo_cuatro{
    font-size: 2rem; 
-   padding: 0;
 }
 .landing_titulo_dos, .landing_titulo_tres{
     font-size: 4rem; 
     line-height: 3rem;
 }
-.sesgar {
-    transform: skewY(-5deg);
-}
+
 .landing_titulo_dos{
-    margin-top: 5px;
+    top: 65px;
+    z-index: 2;
+}
+.landing_titulo_cuatro{
+    top:30px;    
 }
 .landing_titulo_tres {
+    top:95px;
     color: #00e4e7;
     background-color: #e936b0;
     padding: 20px 20px 0px 20px;
@@ -147,11 +152,12 @@ body {
     color: #00FFFF;
     text-shadow: 0 0 10px #00ffff60;
     width: 400px;
-    margin: 50px auto 300px auto;
+    margin: 50px auto 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 
 
 .countdown span {
@@ -181,17 +187,18 @@ position: absolute;
 top: -20px;
 left: 50%;
 transform: translate(-50%, 0);
-font-size: 10px;
+font-size: 15px;
 font-weight: bold;
 color: #00FFFF;
 text-shadow: none;
 }
-.separador_uno{
-    width: 40px !important;
-    margin: 0 !important;
+.separador_tacha {
     position: absolute;
+    left: calc(50% - 150px);
+    top: 55px;
+    color: #e936b0 !important;
+    width: 300px !important;
 }
-
 /*************progresso barra*************/
 .load-bar{
 width: 50%;
@@ -308,4 +315,95 @@ transform: translateY(-17px);
 .precio_antes span{
     background-color: black;
     padding: 20px 30px;
+}
+/****************BOTONES*****************/
+
+.botones {
+    display: flex;
+    margin-bottom: 250px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.index.botones button {
+    width: 300px;
+    border: 5px solid white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    background-color: #E936B0;
+    color: cyan;
+    font-family: 'maxwell';
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0px;
+    cursor: pointer;
+}
+img.botones_img {
+    width: 15%;
+    margin-right: 10px;
+}
+
+
+/******efecto flotante************/
+
+.float {
+    -webkit-animation: bounce-down 3s linear infinite;
+    animation: bounce-down 3s linear infinite;
+}
+
+@-webkit-keyframes bounce-down {
+    25% {
+         -webkit-transform: translateY(-10px);
+    }
+    50%, 100% {
+         -webkit-transform: translateY(0);
+    }
+    75% {
+         -webkit-transform: translateY(10px);
+    }
+}
+
+@keyframes bounce-down {
+     25% {
+          transform: translateY(-10px);
+     }
+     50%, 100% {
+          transform: translateY(0);
+     }
+     75% {
+          transform: translateY(10px);
+     }
+}
+
+
+.float_two{
+    -webkit-animation: bounce-down 10s linear infinite;
+    animation: bounce-down 10s linear infinite;
+}
+
+@-webkit-keyframes bounce-down {
+    25% {
+         -webkit-transform: translateY(-10px);
+    }
+    50%, 100% {
+         -webkit-transform: translateY(0);
+    }
+    75% {
+         -webkit-transform: translateY(10px);
+    }
+}
+
+@keyframes bounce-down {
+     25% {
+          transform: translateY(-10px);
+     }
+     50%, 100% {
+          transform: translateY(0);
+     }
+     75% {
+          transform: translateY(10px);
+     }
 }
