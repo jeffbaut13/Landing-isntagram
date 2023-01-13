@@ -472,3 +472,18 @@ img.botones_img {
     color: white;
     z-index: 3;
 }
+
+.terminos {
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    z-index: 5;
+    color: #00FFFF;
+    position: absolute;
+    width: 100%;
+    bottom: 1%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

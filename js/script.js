@@ -15,6 +15,9 @@ let url = 'https://graph.facebook.com/v15.0/17841435859161379?fields=followers_c
         const x = document.getElementById('progress');
         const y = document.getElementById('porcentaje');
         const z = document.getElementById('price');
+
+
+        
         const seg = document.getElementById('seguidoreConteo');
         
         let cuentaInicial = 2866;
@@ -46,39 +49,39 @@ let url = 'https://graph.facebook.com/v15.0/17841435859161379?fields=followers_c
 
 
 
-let bajarPrecio = (umbral, descuento) => {
+        let bajarPrecio = (umbral, descuento) => {
 
-            if(countFollowers >= umbral){
-                price = acumulados - descuento;
-                acumulados = price;
-                z.textContent = `$${price}`; 
-            }else{
-                z.textContent = `$${acumulados}`; 
+                if(countFollowers >= umbral){
+                    price = acumulados - descuento;
+                    acumulados = price;
+                    z.textContent = `$${price}`; 
+                }else{
+                    z.textContent = `$${acumulados}`; 
+                }
+
             }
 
-        }
 
 
+            if ( countFollowers >= 10 ){
+                price = priceInitial - 10000;
+                acumulados = price;   
+                z.textContent = `$${price}`; 
 
-        if ( countFollowers >= 10 ){
-            price = priceInitial - 10000;
-            acumulados = price;   
-            z.textContent = `$${price}`; 
+                seg.textContent = countFollowers;
 
-            seg.textContent = countFollowers;
+                bajarPrecio(20, 10000);
 
-            bajarPrecio(20, 10000);
+                bajarPrecio(30, 10000);
 
-            bajarPrecio(30, 10000);
+                bajarPrecio(40, 10000);
 
-            bajarPrecio(40, 10000);
-
-            bajarPrecio(50, 10000);
-            
-        }
-        else{
-            z.textContent = `$${priceInitial}`; 
-        }
+                bajarPrecio(50, 10000);
+                
+            }
+            else{
+                z.textContent = `$${priceInitial}`; 
+            }
         
         
         
