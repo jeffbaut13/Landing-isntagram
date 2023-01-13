@@ -17,7 +17,7 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-transition: all .8s;
+transition: all 2s;
 
 }
 body {
@@ -96,7 +96,12 @@ body {
 }
 .landing_img_piramide{
     width: 600px;
-    opacity: 0.8;
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.landing_img_piramide:hover{
+    opacity: 1;
 }
 .landing_parrafos{
     top: 20%;
@@ -236,6 +241,8 @@ width: 100%;
 font-family: "Press start";
 font-size: 2rem;
 transform: translateY(-17px);
+animation: alumbrado 0.5s linear infinite;
+-webkit-animation: alumbrado-in 0.5s linear infinite;
 
 }
 .index{
@@ -332,15 +339,32 @@ transform: translateY(-17px);
     border: 5px solid white;
     border-radius: 10px;
     margin-bottom: 40px;
-    background-color: #E936B0;
+    background-color: rgb(233, 54, 176);
     color: cyan;
-    font-family: 'maxwell';
+    font-family: maxwell;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px 0px;
     cursor: pointer;
+    text-decoration: none;
+    transition: linear 0s;
+    box-shadow: inset 1px 11px 9px 1px #ffffff8f, inset 0px -10px 14px 3px #00000057;
+}
+
+.index.botones .button:hover{
+    background-color: #00FFFF;
+    color: #E936B0;
+}
+img.botones_img_dos{
+    display: none;
+}
+.index.botones .button:hover img.botones_img_dos{
+    display: inline-block;
+}
+.index.botones .button:hover img.botones_img_uno{
+    display: none;
 }
 img.botones_img {
     width: 15%;
@@ -355,36 +379,12 @@ img.botones_img {
     animation: bounce-down 3s linear infinite;
 }
 
-@-webkit-keyframes bounce-down {
-    25% {
-         -webkit-transform: translateY(-10px);
-    }
-    50%, 100% {
-         -webkit-transform: translateY(0);
-    }
-    75% {
-         -webkit-transform: translateY(10px);
-    }
-}
-
-@keyframes bounce-down {
-     25% {
-          transform: translateY(-10px);
-     }
-     50%, 100% {
-          transform: translateY(0);
-     }
-     75% {
-          transform: translateY(10px);
-     }
-}
-
-
 .float_two{
     -webkit-animation: bounce-down 10s linear infinite;
     animation: bounce-down 10s linear infinite;
 }
 
+
 @-webkit-keyframes bounce-down {
     25% {
          -webkit-transform: translateY(-10px);
@@ -407,4 +407,68 @@ img.botones_img {
      75% {
           transform: translateY(10px);
      }
+}
+
+
+
+
+.float_three{
+    -webkit-animation: rotate 2s linear infinite;
+    animation: rotate-back 3s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+    from {
+         -webkit-transform: rotatez(0deg);
+    }
+    50%, 100% {
+         -webkit-transform: rotate(5deg);
+    }
+    to {
+         -webkit-transform: rotate(0deg);
+    }
+}
+
+@keyframes rotate-back {
+     from {
+          transform: rotatez(0deg);
+     }
+     50%{
+        transform: rotatez(5deg);
+        opacity: 1;
+     }
+     to {
+        transform: rotatez(0deg);
+   }
+  
+   
+
+}
+
+@-webkit-keyframes alumbrado-in {
+    from{
+        shadow: 0px 0px 40px #000;
+    }
+    50%{
+        text-shadow: 0px 0px 60px #E936B0;
+    }
+    to{
+        text-shadow: 0px 0px 40px #000;
+    }
+}
+@keyframes alumbrado{
+    from{
+        text-shadow: 0px 0px 40px #000;
+    }
+    50%{
+        text-shadow: 0px 0px 60px #E936B0;
+    }
+    to{
+        text-shadow: 0px 0px 40px #000;
+    }
+}
+
+.white{
+    color: white;
+    z-index: 3;
 }
