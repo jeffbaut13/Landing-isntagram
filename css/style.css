@@ -222,6 +222,7 @@ width: 0;
     background-color: rgb(0, 0, 0);
     font-family: "Press start";
     box-shadow: inset 1px -20px 62px 20px #e936b038;
+    margin-top: 50px;
 }
 .producto-description, .producto-img {
     width: 100%;
