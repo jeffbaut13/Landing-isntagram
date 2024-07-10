@@ -106,7 +106,7 @@ body {
 }
 .landing_parrafos{
     top: 20%;
-    left: calc(80% - 225px);
+    left: calc(60% - 225px);
 }
 .sesgar {
     transform: skewY(-5deg);
@@ -487,4 +487,15 @@ img.botones_img {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+/*********Responsive**********/
+
+@media  (max-width: 768px) {
+    .landing_titulo_dos, .landing_titulo_tres{
+        font-size: 3rem; 
+    }
+    .landing_titulo {
+        width: 400px;
+    }
 }
